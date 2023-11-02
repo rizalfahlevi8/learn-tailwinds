@@ -28,15 +28,17 @@
             },
         };
     </script>
-    <style type="text/tailwindcss">
+    <!-- <style type="text/tailwindcss">
         * {
             border: 1px solid red;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
-    <h1 class="text-8xl font-bold text-center my-10">Hari belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1> <!-- bg-clip-text supaya warna background masuk ke tulisan dan textnya harus transparan dengan text-transparent-->
+    <h1 class="text-8xl font-bold text-center my-10">Hari belajar <span
+            class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
+    <!-- bg-clip-text supaya warna background masuk ke tulisan dan textnya harus transparan dengan text-transparent-->
 
     <section class="mb-10  bg-gradient-to-br from-indigo-200 via-red-400 to-yellow-300">
         <h2 class="text-3xl text-center">Spacing</h2>
@@ -49,7 +51,7 @@
         <div class="w-32 h-32 bg-kopi">Kotak 1</div>
     </section>
 
-    <section class="mb-96 font-inter max-w-3xl mx-auto">
+    <section class="font-inter max-w-3xl mx-auto">
         <h2 class="mb-2 text-4xl font-bold">Belajar Mengenai Typrografy pada TailwindCSS</h2>
         <div class="mb-4 text-lg text-gray-500">By <a href="#" class="text-gray-700 font-semibold">Rizal Fahlevi</a>, 1
             November 2023
@@ -68,6 +70,45 @@
         <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, numquam dolore aperiam
             illum rerum quo quos voluptate dolorum consectetur soluta culpa dolores recusandae consequuntur sequi odio.
             Ipsam molestias dolorem corporis.</p>
+    </section>
+
+    <section>
+        <div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-scroll"
+            style="background-image: url('https://source.unsplash.com/1000x600?computer');">
+            <!-- ingat bg-scroll bg-local bg-fixed berbeda (background attachment)-->
+            <p class="p-5 text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur modi obcaecati
+                accusamus natus dolorum necessitatibus tempore, iure hic nam doloribus quae quod architecto magni alias
+                molestias incidunt maxime asperiores. Harum sequi illum maxime asperiores saepe vero quam voluptatem
+                perferendis voluptatibus? Similique corporis nulla ex architecto fuga cumque delectus reprehenderit
+                consequatur eius? Autem temporibus, officiis magnam expedita dolorem reprehenderit sequi et maxime
+                laborum quos porro qui delectus pariatur repellendus quidem iure voluptates eligendi sint laudantium
+                fugit! Maxime dignissimos aut ipsam reiciendis architecto sequi adipisci necessitatibus autem nobis
+                natus fuga, molestiae libero, praesentium quasi voluptatem laudantium recusandae itaque at tempora sit
+                nemo? Perspiciatis eveniet sunt molestiae repellendus. Cumque ratione eos doloremque ullam. Quisquam
+                porro atque culpa earum dolore ipsam voluptatibus aliquid quae odio blanditiis ipsa, tenetur veritatis
+                temporibus nobis ea veniam delectus vero hic obcaecati velit nam explicabo animi provident? Nam fugit
+                voluptate voluptates, ea debitis deserunt illum veritatis eligendi velit voluptatem. Cumque vitae
+                numquam esse voluptas earum exercitationem animi voluptatem illum non blanditiis tenetur quae deserunt
+                ab quia dicta cupiditate delectus accusantium placeat, aspernatur iure fugiat hic temporibus nihil iste?
+                Rerum illum accusamus voluptates velit explicabo error temporibus dolore eveniet cum tempora quo
+                adipisci necessitatibus numquam excepturi, tenetur doloribus nostrum et!</p>
+        </div>
+        <!-- jika tidak ada ukuran di tailwind tanpa config bisa menambahkan sendiri dengan [nilai] -->
+        <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 opacity-90 overflow-hidden border-8 bg-blend-overlay blur-sm"
+            style="background-image: url(./img/1.jpg);">
+            <!-- background size terdiri bg-contain (ada repeat jadi supaya repeatnya hilang dikasinh bg-no-repeat) bg-cover bg-auto -->
+            <div class="w-full h-full bg-blue-300 mix-blend-darken">
+
+            </div>
+        </div>
+        <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 flex"
+            style="background-image: url(./img/1.jpg);">
+            <!-- background size terdiri bg-contain (ada repeat jadi supaya repeatnya hilang dikasinh bg-no-repeat) bg-cover bg-auto -->
+            <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur rounded-full">
+
+            </div>
+        </div>
+        <div class="mb-96"></div>
     </section>
 </body>
 
