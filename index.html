@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Belajar Tailwinds</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { //menambahkan aturan baru
+                    spacing: {
+                        13: '3.25rem',
+                    },
+                    fontFamily: {
+                        inter: ['Inter'],
+                    },
+                    colors: {
+                        wpu: '#bada55',
+                        kopi: '#c0ffee'
+                    }
+                },
+
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        * {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-8xl font-bold text-center my-10">Hari belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1> <!-- bg-clip-text supaya warna background masuk ke tulisan dan textnya harus transparan dengan text-transparent-->
+
+    <section class="mb-10  bg-gradient-to-br from-indigo-200 via-red-400 to-yellow-300">
+        <h2 class="text-3xl text-center">Spacing</h2>
+        <div class="m-13 ">Margin</div>
+        <div class="p-8 ">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-200">
+        <h2 class="text-3xl text-center">Sizing</h2>
+        <div class="w-32 h-32 bg-kopi">Kotak 1</div>
+    </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Belajar Mengenai Typrografy pada TailwindCSS</h2>
+        <div class="mb-4 text-lg text-gray-500">By <a href="#" class="text-gray-700 font-semibold">Rizal Fahlevi</a>, 1
+            November 2023
+        </div>
+        <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit
+            Accusamus distinctio, ullam,
+            <a href="#" class="underline font-semibold text-blue-600">incidunt</a>
+            perferendis repudiandae sequi in esse dolorum quam adipisci consequuntur voluptatum aliquid possimus
+            maiores. Fugiat praesentium recusandae et. Provident fugiat omnis cum praesentium reprehenderit delectus
+            recusandae quas nulla repellat, expedita, optio suscipit. Dolore placeat veritatis odio quisquam,
+            perspiciatis illum.
+        </p>
+        <blockquote class="mb-4 italic font-thin text-xl">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+            fugit nobis qui aliquid ipsum, in
+            aut similique eaque libero impedit."</blockquote>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, numquam dolore aperiam
+            illum rerum quo quos voluptate dolorum consectetur soluta culpa dolores recusandae consequuntur sequi odio.
+            Ipsam molestias dolorem corporis.</p>
+    </section>
+</body>
+
+</html>
