@@ -11,6 +11,7 @@
     <title>Belajar Tailwinds</title>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: { //menambahkan aturan baru
                     spacing: {
@@ -28,14 +29,14 @@
             },
         };
     </script>
-    <!-- <style type="text/tailwindcss">
-        * {
-            border: 1px solid red;
-        }
-    </style> -->
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle{
+            @apply translate-x-4;
+        } 
+    </style>
 </head>
 
-<body>
+<body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-8xl font-bold text-center my-10">Hari belajar <span
             class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
     <!-- bg-clip-text supaya warna background masuk ke tulisan dan textnya harus transparan dengan text-transparent-->
@@ -108,8 +109,48 @@
 
             </div>
         </div>
+
+        <hr class="my-20">
+
+        <div class="flex justify-center">
+            <span class="text-sm text-slate-500 mr-2">Light</span>
+            <input type="checkbox" id="toggle" class="hidden">
+            <label for="toggle">
+                <div class="w-9 h-5 bg-slate-500 rounded-full  flex items-center p-0.5 cursor-pointer">
+                    <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+                </div>
+            </label>
+            <span class="text-sm text-slate-500 ml-2">Dark</span>
+        </div>
+
+        <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100 ">Simpan</button>
+
+        <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300"> <!-- group untuk styling based on parent state -->
+            <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
+            <p class="text-slate-600 group-hover:text-white selection:bg-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus minima maxime veritatis. Necessitatibus repudiandae dolorum veritatis inventore nostrum ex a, tempore mollitia nisi, itaque dignissimos? Inventore adipisci voluptas obcaecati.</p>
+        </div>
+
+        <div class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
+            <form action="">
+                <label for="email">
+                    <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+                    <input type="email" id="email" placeholder="masukkan email.." class="px-3 my-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
+                    <p class="text-sm ml-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p><!-- peer untuk styling based on sibling state -->
+                </label>
+                
+            </form>
+        </div>
         <div class="mb-96"></div>
     </section>
+    
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        checkbox.addEventListener('click', function(){
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        })
+    </script>
 </body>
 
 </html>
