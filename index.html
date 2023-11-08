@@ -23,6 +23,18 @@
                     colors: {
                         wpu: '#bada55',
                         kopi: '#c0ffee'
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'goyang': 'goyang 1s ease-in-out infinite',
+                        //          |
+                        //          > ini keyframe
+                    },
+                    keyframes: {
+                        goyang: {
+                            '0%, 100%': {transform: 'rotate(-3deg)'},
+                            '50%': {transform: 'rotate(3deg)'},
+                        }
                     }
                 },
 
@@ -123,31 +135,60 @@
             <span class="text-sm text-slate-500 ml-2">Dark</span>
         </div>
 
-        <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100 ">Simpan</button>
+        <button
+            class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100 ">Simpan</button>
 
-        <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300"> <!-- group untuk styling based on parent state -->
-            <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
-            <p class="text-slate-600 group-hover:text-white selection:bg-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus minima maxime veritatis. Necessitatibus repudiandae dolorum veritatis inventore nostrum ex a, tempore mollitia nisi, itaque dignissimos? Inventore adipisci voluptas obcaecati.</p>
+        <div
+            class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300">
+            <!-- group untuk styling based on parent state -->
+            <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My
+                Card</h5>
+            <p
+                class="text-slate-600 group-hover:text-white selection:bg-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus minima maxime veritatis.
+                Necessitatibus repudiandae dolorum veritatis inventore nostrum ex a, tempore mollitia nisi, itaque
+                dignissimos? Inventore adipisci voluptas obcaecati.</p>
         </div>
 
         <div class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
             <form action="">
                 <label for="email">
-                    <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
-                    <input type="email" id="email" placeholder="masukkan email.." class="px-3 my-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
-                    <p class="text-sm ml-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p><!-- peer untuk styling based on sibling state -->
+                    <span
+                        class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+                    <input type="email" id="email" placeholder="masukkan email.."
+                        class="px-3 my-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
+                    <p class="text-sm ml-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+                    <!-- peer untuk styling based on sibling state -->
                 </label>
-                
+
             </form>
         </div>
+
+        <hr class="my-20">
+
+        <div
+            class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-125 hover:rotate-45 origin-top-left hover:bg-pink-500 transition">
+            <!-- origin-top-left untuk mengubah sumbu putar -->
+        </div>
+
+        <div class="w-40 h-40 mx-auto mt-20 group">
+            <div
+                class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-1000">
+            </div>
+        </div><!-- transisinya supaya mulus -->
+
+        <div class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg mt-20 animate-spin-slow"></div>
+
+        <div class="w-40 h-40 bg-green-500 mx-auto rounded-lg shadow-lg mt-20 animate-goyang"></div>
+
         <div class="mb-96"></div>
     </section>
-    
+
     <script>
         const checkbox = document.querySelector('#toggle');
         const html = document.querySelector('html');
 
-        checkbox.addEventListener('click', function(){
+        checkbox.addEventListener('click', function () {
             checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
         })
     </script>
