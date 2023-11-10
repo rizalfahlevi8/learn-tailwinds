@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -32,8 +32,8 @@
                     },
                     keyframes: {
                         goyang: {
-                            '0%, 100%': {transform: 'rotate(-3deg)'},
-                            '50%': {transform: 'rotate(3deg)'},
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
                         }
                     }
                 },
@@ -180,6 +180,36 @@
         <div class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg mt-20 animate-spin-slow"></div>
 
         <div class="w-40 h-40 bg-green-500 mx-auto rounded-lg shadow-lg mt-20 animate-goyang"></div>
+
+        <hr class="my-20 border-t-4">
+
+        <div class="container px-8 max-w-lg mx-auto">
+            <div class="border rounded-lg shadow-lg p-10 relative">
+                <div class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-5 -right-5 cursor-pointer"><span
+                        class="text m-auto">❌</span></div>
+                <img src="img/1.jpg" alt="laptop" width="150" class="float-left mr-3">
+                <div
+                    class="w-10 h-10 bg-sky-200 rounded-full flex absolute -top-5 left-1/2 -translate-x-1/2 cursor-pointer">
+                    <span class="text m-auto">🔝</span></div>
+                <div class="w-10 h-10 bg-sky-200 rounded-full flex fixed bottom-5 right-5 cursor-pointer"><a href="#"
+                        class="text m-auto">🔝</a></div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum aliquam quis dolores reprehenderit!
+                    Delectus eius quo doloremque iure quam tempore facilis aut rem atque ducimus! Et optio, voluptates
+                    similique nesciunt eaque nulla. In assumenda velit fugiat rem quos eius, mollitia minima alias rerum
+                    iure, neque quidem, molestiae error facere consectetur!
+                </p>
+            </div>
+        </div>
+
+        <div class="container max-w-lg mx-auto border rounded-lg shadow-lg p-10 mt-20 columns-3">
+            <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4">
+        </div>
 
         <div class="mb-96"></div>
     </section>
